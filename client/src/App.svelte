@@ -1,30 +1,14 @@
 <script>
+	import Navigation from './componets/Navigation.svelte'
+	import Footer from './componets/Footer.svelte'
 	export let name;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<Navigation />
+<main class="flex-shrink-0">
+	<div class="container" style="margin-top: 70px;">
+		<h1>Hello {name}!</h1>
+		<h2>FIBER SVELTE</h2>
+	</div>
 </main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<Footer />
