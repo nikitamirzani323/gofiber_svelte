@@ -1,6 +1,6 @@
 # gofiber_svelte
 
-Default Plugin
+Default Plugin<br />
 github.com/gofiber/fiber/v2 <br />
 github.com/go-sql-driver/mysql <br />
 github.com/tkanos/gonfig <br />
