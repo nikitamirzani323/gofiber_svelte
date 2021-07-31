@@ -22,9 +22,8 @@ func Init() *fiber.App {
 		Browse:    true,
 	})
 	// app.Get("/", func(c *fiber.Ctx) error {
-	// 	return c.JSON(fiber.Map{
-	// 		"status":  fiber.StatusOK,
-	// 		"message": "fiber svelte",
+	// 	return c.Render("index", fiber.Map{
+	// 		"hello": "world",
 	// 	})
 	// })
 	return app
