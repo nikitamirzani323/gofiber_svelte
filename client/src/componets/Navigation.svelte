@@ -1,3 +1,6 @@
+<script>
+  import {link} from 'svelte-spa-router';
+</script>
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #1f2937!important;">
@@ -9,13 +12,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" use:link href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" use:link href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link disabled" use:link href="/" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
         <form class="d-flex">

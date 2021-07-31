@@ -8,7 +8,17 @@
     Refresh
 </button>
 <div class="card" style="border-radius: 0px;margin-top:10px;">
-  <div class="card-header" style="">Home</div>
+  <div class="card-header" style="">
+    Home
+    <div class="float-end">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>1 of 100</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+</div>
   <div class="col-lg-12" style="padding: 5px;">
     <div class="row g-2">
       <div class="col-sm-11">
@@ -62,8 +72,6 @@
 
   </div>
   <div class="card-footer" style="">
-    <button class="btn btn-warning" style="border-radius: 0px;">
-      Go somewhere
-    </button>
+    Total Record : 0
   </div>
 </div>
