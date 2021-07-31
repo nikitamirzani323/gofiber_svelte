@@ -4,26 +4,42 @@
 	import { Row, Container, Col } from 'sveltestrap'
 	import Navigation from './componets/Navigation.svelte'
 	import Footer from './componets/Footer.svelte'
-	import Home from './pages/Home.svelte'
+	import Home from './pages/home/Home.svelte'
+	import Login from './pages/Login.svelte'
 	import NotFound from './pages/Notfound.svelte'
 
-	const routes = {
-		'/': wrap({
-			component:Home
-		}),
-		'*': NotFound,
+	let token = ""
+	let routes = ""
+	let isNav = false
+	if(token === ""){
+		routes = {
+			'/': wrap({
+				component:Login
+			}),
+			'*': NotFound,
+		}
+	}else{
+		isNav = true
+		routes = {
+			'/': wrap({
+				component:Home
+			}),
+			'*': NotFound,
+		}
 	}
+
+	
 </script>
+{#if isNav}
 <Navigation />
-<main class="flex-shrink-0">
-	<Container style="margin-top: 70px;">
-		<Row>
-			<Col>
-				<Router routes={routes} />
-				
-			</Col>
-		</Row>
-		
-	</Container>
-</main>
+{/if}
+<Container style="margin-top: 70px;">
+	<Row>
+		<Col>
+			<Router routes={routes} />
+			
+		</Col>
+	</Row>
+	
+</Container>
 <Footer />

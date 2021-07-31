@@ -1,5 +1,5 @@
 <script>
-    import Panel from '../componets/Panel.svelte'
+    import Panel from '../../componets/Panel.svelte'
 
     const queryString = window.location.search
 	const urlParams = new URLSearchParams(queryString)
