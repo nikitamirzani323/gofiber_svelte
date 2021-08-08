@@ -4,7 +4,7 @@
     const queryString = window.location.search
 	const urlParams = new URLSearchParams(queryString)
 	const token_browser = urlParams.get('token')
-	let client_device = "WEBSITE"
+	let page = "Home"
 	let screen_height = screen.height - 480;
 </script>
 <button class="btn btn-primary" style="border-radius: 0px;">
@@ -18,7 +18,7 @@
 </button>
 <Panel height_body="{screen_height}px">
 	<slot:template slot="cheader">
-		Home
+		{page}
 		<div class="float-end">
 			<select class="form-select" aria-label="Default select example">
 				<option selected>1 of 100</option>

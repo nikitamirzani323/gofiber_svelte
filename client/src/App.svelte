@@ -5,6 +5,7 @@
 	import Navigation from './componets/Navigation.svelte'
 	import Footer from './componets/Footer.svelte'
 	import Home from './pages/home/Home.svelte'
+	import Company from './pages/company/company.svelte'
 	import Login from './pages/Login.svelte'
 	import NotFound from './pages/Notfound.svelte'
 
@@ -23,6 +24,9 @@
 		routes = {
 			'/': wrap({
 				component:Home
+			}),
+			'/company': wrap({
+				component:Company
 			}),
 			'*': NotFound,
 		}
