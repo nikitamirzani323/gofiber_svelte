@@ -23,6 +23,4 @@ export const fetchCompany = async(url) => {
         cache.set(url, loadedCompany)
         mcompany.set(loadedCompany)
     }
-
-    
 }
