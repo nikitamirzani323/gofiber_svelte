@@ -8,7 +8,7 @@
 	import Login from './pages/Login.svelte'
 	import NotFound from './pages/Notfound.svelte'
 
-	let token = ""
+	let token = "123123"
 	let routes = ""
 	let isNav = false
 	if(token === ""){

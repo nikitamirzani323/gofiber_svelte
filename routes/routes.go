@@ -16,15 +16,5 @@ func Init() *fiber.App {
 		ByteRange: true,
 		Browse:    true,
 	})
-	app.Static("/about", "client/public", fiber.Static{
-		Compress:  true,
-		ByteRange: true,
-		Browse:    true,
-	})
-	// app.Get("/", func(c *fiber.Ctx) error {
-	// 	return c.Render("index", fiber.Map{
-	// 		"hello": "world",
-	// 	})
-	// })
 	return app
 }
