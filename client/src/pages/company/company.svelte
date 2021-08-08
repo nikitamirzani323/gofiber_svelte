@@ -1,5 +1,5 @@
 <script>
-    import { mcompany } from "../../stores/companystore"
+    import { mcompany,fetchCompany } from "../../stores/companystore"
     import Panel from '../../componets/Panel.svelte'
 
 	let page = "Company"
@@ -12,7 +12,7 @@
         {idpaging:2,nmpaging:"3 Of "+totalrow},
         {idpaging:3,nmpaging:"4 Of "+totalrow},
     ]
-    
+    fetchCompany(`http://localhost:4000/api/company`)
 </script>
 <button class="btn btn-primary" style="border-radius: 0px;">
     New
