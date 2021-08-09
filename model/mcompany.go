@@ -1,6 +1,7 @@
 package model
 
 import (
+	"log"
 	"time"
 
 	"github.com/gofiber/fiber/v2"
@@ -23,6 +24,7 @@ func FetchAll_mcompany() (Response, error) {
 	var obj Mcompany
 	var arraobj []Mcompany
 	var res Response
+
 	con := db.CreateCon()
 
 	sql := "SELECT * FROM tbl_mst_company"
@@ -33,7 +35,6 @@ func FetchAll_mcompany() (Response, error) {
 	if err != nil {
 		return res, err
 	}
-
 	for rows.Next() {
 		err = rows.Scan(
 			&obj.IdCompany,
@@ -50,8 +51,11 @@ func FetchAll_mcompany() (Response, error) {
 		}
 		arraobj = append(arraobj, obj)
 	}
+	log.Println(arraobj)
+	log.Println(len(arraobj))
 	res.Status = fiber.StatusOK
 	res.Message = "Success"
+	res.Totalrecord = len(arraobj)
 	res.Record = arraobj
 
 	return res, nil

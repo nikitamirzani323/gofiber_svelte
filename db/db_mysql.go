@@ -2,6 +2,7 @@ package db
 
 import (
 	"database/sql"
+	"log"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/nikitamirzani323/gofiber_svelte/configs"
@@ -16,12 +17,12 @@ func InitMysql() {
 
 	db, err = sql.Open("mysql", connectionString)
 	if err != nil {
-		panic("koneksi string error")
+		log.Panic("koneksi string error")
 	}
 
 	err = db.Ping()
 	if err != nil {
-		panic("DNS invalid")
+		log.Panic("DNS invalid")
 	}
 }
 
